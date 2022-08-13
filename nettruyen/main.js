@@ -6,15 +6,28 @@ var reviewdiv = document.querySelector('.body1')
 function make_slide(amountSlideAppear){
     var widthitemanhmargin = reviewdiv.offsetWidth / amountSlideAppear;
     let widthallbox = widthitemanhmargin * listbox.length;
+    console.log(widthallbox)
     let count = 0
     let spacing = widthallbox - amountSlideAppear*widthitemanhmargin
-    wrapperbox.style.width = `${widthallbox}px`
+    wrapperbox.style.width = `1035.6px`
     function auto(){
         count += widthitemanhmargin
         if (count > spacing){
             count = 0;
         }
-        wrapperbox.style.transform = `translateX(${-count}px)`
+        if (count < widthitemanhmargin*2){
+            wrapperbox.style.width = `1035.6px`
+            listbox[7].style.display='none'
+            listbox[6].style.display='none'
+            wrapperbox.style.transform = `translateX(${-count}px)`
+        }
+        else{
+            wrapperbox.style.transform = `translateX(${-count}px)`
+            wrapperbox.style.width = `1380.8px`
+            listbox[7].style.display='block'
+            listbox[6].style.display='block'
+
+        }
     setTimeout(auto,5000)
     }
     setTimeout(auto,5000)
@@ -23,14 +36,43 @@ function make_slide(amountSlideAppear){
         if (count > spacing){
             count = 0;
         }
-        wrapperbox.style.transform = `translateX(${-count}px)`
+        if (count < widthitemanhmargin*2){
+            wrapperbox.style.width = `1035.6px`
+            listbox[7].style.display='none'
+            listbox[6].style.display='none'
+            wrapperbox.style.transform = `translateX(${-count}px)`
+        }
+        else{
+            wrapperbox.style.width = `1380.8px`
+            wrapperbox.style.transform = `translateX(${-count}px)`
+            listbox[7].style.display='block'
+            listbox[6].style.display='block'
+
+        }
     })
     btnleft.addEventListener('click',function(){
         count -= widthitemanhmargin
         if (count < -1){
             count = spacing;
         }
-        wrapperbox.style.transform = `translateX(${-count}px)`
+        if ( count <= widthitemanhmargin*2){
+            wrapperbox.style.width = `1035.6px`
+            wrapperbox.style.transform = `translateX(${-count}px)`
+            listbox[7].style.display='none'
+            if(count==345.19999999999993){
+                wrapperbox.style.width = `1208.2px`
+                listbox[6].style.display='block'
+            }
+            else{
+                listbox[6].style.display='none'
+            }
+        }
+        else{
+            wrapperbox.style.width = `1380.8px`
+            listbox[7].style.display='block'
+            listbox[6].style.display='block'
+            wrapperbox.style.transform = `translateX(${-count}px)`
+        }
     })
 }
 make_slide(5)

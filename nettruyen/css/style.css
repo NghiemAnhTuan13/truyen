@@ -352,3 +352,6 @@ li{
     width: 100%;
     z-index: 4;
 }
+.slide0{
+    display: none;
+}
