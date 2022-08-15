@@ -12,7 +12,7 @@ li{
 }
 .heading1{
     height: 50px;
-    background-image: url(./img/phao_hoa.jpg);
+    background-image: url(./img/hinh-nen-background-dep-6.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -158,7 +158,6 @@ li{
     float: left;
     width: 195px;
     height: 1500px;
-    background-color: #FFF;
     position: absolute;
     top: 90px;
     z-index: 1;
@@ -169,7 +168,6 @@ li{
     float: right;
     width: 195px;
     height: 1500px;
-    background-color: #FFF;
     position: absolute;
     right: 0px;
     top: 90px;
@@ -356,4 +354,27 @@ li{
 }
 .slide0{
     display: none;
+}
+@media (min-width : 1250px){
+    .boxleft{
+        width: calc((100%-854px)/2-5);
+    }
+    .boxright{
+        width: calc((100%-854px)/2-5);
+    }
+    .body1.conten.menu{
+        margin: 0 calc((100%-854px)/2-5) 0 calc((100%-854px)/2-5);
+    }
+    .btnright.bodymenu.user{
+        right: calc((100%-854px)/2-5);
+    }
+    .last{
+        left: calc((100%-854px)/2+5) ;
+    }
+    #ct{
+        width: calc((100%-854px)/2-254px);
+    }
+}
+@media (min-width : 900px ) and (max-width : 1250px){
+
 }

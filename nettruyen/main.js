@@ -33,9 +33,9 @@ function make_slide(amountSlideAppear){
             listbox[6].style.display='block'
 
         }
-    setTimeout(auto,5000)
+    setTimeout(auto,1000)
     }
-    //setTimeout(auto,5000)
+    setTimeout(auto,1000)
     btnright.addEventListener('click',function(){
         count += widthitemanhmargin
         if (count > spacing){
