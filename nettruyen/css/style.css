@@ -58,7 +58,7 @@ li{
     font-size: 20px;
     position: absolute;
     top:0;
-    left: 950px;
+    right : 200px;
     z-index: 4;
 }
 .content .user0{
@@ -210,6 +210,8 @@ li{
     margin-right: 0;
 }
 .bodymenu{
+    position: absolute;
+    right: 195px;
     float: left;
     width: 256px;
     height: 300px;
@@ -322,12 +324,12 @@ li{
 .ctop2{
     display: none;
     position: absolute;
-    top: 870px;
+    top: 530px;
 }
 .ctop3{
     display: none;
     position: absolute;
-    top: 870px;
+    top: 530px;
 
 }
 .last{
