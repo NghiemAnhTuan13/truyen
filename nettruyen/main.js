@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded',function(){
                     reviewdiv.style.margin = `10px`
                     content[1].style.margin = `10px `
                     content[0].style.margin = `0 0 0 100px ` 
-                    btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+                    btnright.style.right = `10px`
                     content1.style.width =`${window.innerWidth-10}px`
                     last.style.top = '1550px'
 
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded',function(){
                         reviewdiv.style.margin = `10px`
                         content[1].style.margin = `10px `
                         content[0].style.margin = `0 0 0 100px ` 
-                        btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+                        btnright.style.right = `10px`
                         content1.style.width =`${window.innerWidth-10}px`
                         last.style.top = '1550px'
                         last.style.left = '50px'
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded',function(){
                         reviewdiv.style.margin = `10px`
                         content[1].style.margin = `10px `
                         content[0].style.margin = `0 0 0 20px ` 
-                        btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+                        btnright.style.right = `10px`
                         content1.style.width =`${window.innerWidth-10}px`
                         last.style.top = '2100px'
                         last.style.left = '0'
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded',function(){
                     reviewdiv.style.margin = `10px`
                     content[1].style.margin = `10px `
                     content[0].style.margin = `0 0 0 100px ` 
-                    btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+                    btnright.style.right = `10px`
                     content1.style.width =`${window.innerWidth-10}px`
 
                     element.forEach((a)=> {
@@ -396,7 +396,7 @@ document.addEventListener('DOMContentLoaded',function(){
                         reviewdiv.style.margin = `10px`
                         content[1].style.margin = `10px `
                         content[0].style.margin = `0 0 0 100px ` 
-                        btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+                        btnright.style.right = `10px`
                         content1.style.width =`${window.innerWidth-10}px`
                         last.style.top = '1550px'
                         last.style.left = '50px'
@@ -421,7 +421,7 @@ document.addEventListener('DOMContentLoaded',function(){
                         reviewdiv.style.margin = `10px`
                         content[1].style.margin = `10px `
                         content[0].style.margin = `0 0 0 20px ` 
-                        btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+                        btnright.style.right = `10px`
                         content1.style.width =`${window.innerWidth-10}px`
                         last.style.top = '2100px'
                         last.style.left = '0'
