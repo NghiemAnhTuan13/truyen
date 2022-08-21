@@ -132,6 +132,9 @@ var last = document.querySelector('.last')
 var content1 = document.querySelector('#ct')
 var element = document.querySelectorAll('.element')
 var heading = document.querySelectorAll('.inner770')
+var close = document.querySelector('.close')
+var newmenu = document.querySelector('.newmenu')
+var boxmenu = document.querySelector('.boxmenu')
 document.addEventListener('DOMContentLoaded',function(){
     window.addEventListener('resize',function(){
         if(window.innerWidth >= 1250){
@@ -146,6 +149,8 @@ document.addEventListener('DOMContentLoaded',function(){
             user.style.right = `${(window.innerWidth-854)/2}px`
             last.style.left = `${(window.innerWidth-854)/2+50}px`
             last.style.top = '1550px'
+            boxmenu.style.display = 'none'
+            newmenu.style.display =' none'
 
             element.forEach((a)=> {
                 a.style.width = `${content1.offsetWidth/4-15}px`
@@ -177,6 +182,8 @@ document.addEventListener('DOMContentLoaded',function(){
             user.style.right = `${(window.innerWidth-854)/2}px`
             last.style.left = `${(window.innerWidth-854)/2+50}px`
             last.style.top = '1550px'
+            boxmenu.style.display = 'none'
+            newmenu.style.display =' none'
 
             content1.style.width =`${window.innerWidth-boxleft.offsetWidth*2-254}px`
             element.forEach((a)=> {
@@ -195,6 +202,16 @@ document.addEventListener('DOMContentLoaded',function(){
 
             }
             else{
+                boxmenu.style.display = 'block'
+                close.addEventListener('click',function(){
+                    newmenu.style.display =' none'
+                })
+                boxmenu.addEventListener('click',function(){
+                    newmenu.style.display =' block'
+                })
+                heading.forEach((b)=>{
+                    b.style.display ='none'
+                })
                 heading.forEach((b)=>{
                     b.style.display ='none'
                 })
@@ -204,7 +221,7 @@ document.addEventListener('DOMContentLoaded',function(){
                     bodymenu.style.display = 'none'
                     reviewdiv.style.margin = `10px`
                     content[1].style.margin = `10px `
-                    content[0].style.margin = `10px ` 
+                    content[0].style.margin = `0 0 0 100px ` 
                     btnright.style.right = `${(window.innerWidth-854)/2-5}px`
                     content1.style.width =`${window.innerWidth-10}px`
                     last.style.top = '1550px'
@@ -225,7 +242,7 @@ document.addEventListener('DOMContentLoaded',function(){
                         bodymenu.style.display = 'none'
                         reviewdiv.style.margin = `10px`
                         content[1].style.margin = `10px `
-                        content[0].style.margin = `10px ` 
+                        content[0].style.margin = `0 0 0 100px ` 
                         btnright.style.right = `${(window.innerWidth-854)/2-5}px`
                         content1.style.width =`${window.innerWidth-10}px`
                         last.style.top = '1550px'
@@ -250,7 +267,7 @@ document.addEventListener('DOMContentLoaded',function(){
                         bodymenu.style.display = 'none'
                         reviewdiv.style.margin = `10px`
                         content[1].style.margin = `10px `
-                        content[0].style.margin = `10px ` 
+                        content[0].style.margin = `0 0 0 20px ` 
                         btnright.style.right = `${(window.innerWidth-854)/2-5}px`
                         content1.style.width =`${window.innerWidth-10}px`
                         last.style.top = '2100px'
@@ -287,6 +304,9 @@ document.addEventListener('DOMContentLoaded',function(){
             user.style.right = `${(window.innerWidth-854)/2}px`
             last.style.left = `${(window.innerWidth-854)/2+50}px`
             last.style.top = '1550px'
+            boxmenu.style.display = 'none'
+            newmenu.style.display =' none'
+
             element.forEach((a)=> {
                 a.style.width = `${content1.offsetWidth/4-15}px`
                 a.style.marginLeft ='5px'
@@ -317,6 +337,9 @@ document.addEventListener('DOMContentLoaded',function(){
             user.style.right = `${(window.innerWidth-854)/2}px`
             last.style.left = `${(window.innerWidth-854)/2+50}px`
             last.style.top = '1550px'
+            boxmenu.style.display = 'none'
+            newmenu.style.display =' none'
+            
             content1.style.width =`${window.innerWidth-boxleft.offsetWidth*2-254}px`
             element.forEach((a)=> {
                 a.style.width = `${content1.offsetWidth/3-30}px`
@@ -336,6 +359,13 @@ document.addEventListener('DOMContentLoaded',function(){
 
             }
             else{
+                boxmenu.style.display = 'block'
+                close.addEventListener('click',function(){
+                    newmenu.style.display =' none'
+                })
+                boxmenu.addEventListener('click',function(){
+                    newmenu.style.display =' block'
+                })
                 heading.forEach((b)=>{
                     b.style.display ='none'
                 })
@@ -345,9 +375,10 @@ document.addEventListener('DOMContentLoaded',function(){
                     bodymenu.style.display = 'none'
                     reviewdiv.style.margin = `10px`
                     content[1].style.margin = `10px `
-                    content[0].style.margin = `10px ` 
+                    content[0].style.margin = `0 0 0 100px ` 
                     btnright.style.right = `${(window.innerWidth-854)/2-5}px`
                     content1.style.width =`${window.innerWidth-10}px`
+
                     element.forEach((a)=> {
                         a.style.width = `${content1.offsetWidth/4-40}px`
                         a.style.margin ='0 10px 0 5px'
@@ -364,7 +395,7 @@ document.addEventListener('DOMContentLoaded',function(){
                         bodymenu.style.display = 'none'
                         reviewdiv.style.margin = `10px`
                         content[1].style.margin = `10px `
-                        content[0].style.margin = `10px ` 
+                        content[0].style.margin = `0 0 0 100px ` 
                         btnright.style.right = `${(window.innerWidth-854)/2-5}px`
                         content1.style.width =`${window.innerWidth-10}px`
                         last.style.top = '1550px'
@@ -389,7 +420,7 @@ document.addEventListener('DOMContentLoaded',function(){
                         bodymenu.style.display = 'none'
                         reviewdiv.style.margin = `10px`
                         content[1].style.margin = `10px `
-                        content[0].style.margin = `10px ` 
+                        content[0].style.margin = `0 0 0 20px ` 
                         btnright.style.right = `${(window.innerWidth-854)/2-5}px`
                         content1.style.width =`${window.innerWidth-10}px`
                         last.style.top = '2100px'
