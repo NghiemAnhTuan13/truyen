@@ -104,7 +104,7 @@ top0[1].addEventListener('click',function(){
 top0[2].addEventListener('click',function(){
     top0[2].style.backgroundColor = '#fff'
     top0[1].style.backgroundColor = '#ccc'
-    top0[1].style.backgroundColor = '#ccc'
+    top0[0].style.backgroundColor = '#ccc'
     top3.style.display = 'block'
     top2.style.display = 'none'
     top1.style.display = 'none'
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded',function(){
         if(window.innerWidth >= 1250){
             boxleft.style.width = `${(window.innerWidth-854)/2-15}px`
             boxright.style.width = `${(window.innerWidth-854)/2-15}px`
-            reviewdiv.style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
+            reviewdiv.style.margin = `0 ${(window.innerWidth-854)/2-15}px 0 ${(window.innerWidth-854)/2-15}px`
             content[1].style.margin = `0 ${(window.innerWidth-854)/2-15}px 0 ${(window.innerWidth-854)/2-15}px`
             content[0].style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
             menu.style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
@@ -145,9 +145,11 @@ document.addEventListener('DOMContentLoaded',function(){
             bodymenu.style.right = `${(window.innerWidth-854)/2-15}px`
             user.style.right = `${(window.innerWidth-854)/2}px`
             last.style.left = `${(window.innerWidth-854)/2+50}px`
+            last.style.top = '1550px'
+
             element.forEach((a)=> {
                 a.style.width = `${content1.offsetWidth/4-15}px`
-                a.style.marginLeft ='5px'
+                a.style.margin ='0 5px 0 5px'
 
             })
             for(var i=12;i<16;i++){
@@ -158,9 +160,11 @@ document.addEventListener('DOMContentLoaded',function(){
             })
             bodymenu.style.display = 'block'
             make_slide(5)
+            boxleft.style.display = `block`
+            boxright.style.display = `block`
 
         }
-    else {
+        else {
             if (window.innerWidth >= 900){
             boxleft.style.width = `${(window.innerWidth-854)/2-5}px`
             boxright.style.width = `${(window.innerWidth-854)/2-5}px`
@@ -172,6 +176,8 @@ document.addEventListener('DOMContentLoaded',function(){
             bodymenu.style.right = `${(window.innerWidth-854)/2}px`
             user.style.right = `${(window.innerWidth-854)/2}px`
             last.style.left = `${(window.innerWidth-854)/2+50}px`
+            last.style.top = '1550px'
+
             content1.style.width =`${window.innerWidth-boxleft.offsetWidth*2-254}px`
             element.forEach((a)=> {
                 a.style.width = `${content1.offsetWidth/3-40}px`
@@ -184,6 +190,8 @@ document.addEventListener('DOMContentLoaded',function(){
             })
             bodymenu.style.display = 'block'
             make_slide(4)
+            boxleft.style.display = `block`
+            boxright.style.display = `block`
 
             }
             else{
@@ -191,32 +199,76 @@ document.addEventListener('DOMContentLoaded',function(){
                     b.style.display ='none'
                 })
                 if(window.innerWidth >= 700){
+                    boxleft.style.display = `none`
+                    boxright.style.display = `none`
                     bodymenu.style.display = 'none'
+                    reviewdiv.style.margin = `10px`
+                    content[1].style.margin = `10px `
+                    content[0].style.margin = `10px ` 
+                    btnright.style.right = `${(window.innerWidth-854)/2-5}px`
                     content1.style.width =`${window.innerWidth-10}px`
+                    last.style.top = '1550px'
+
                     element.forEach((a)=> {
                         a.style.width = `${content1.offsetWidth/4-40}px`
-                        a.style.marginLeft ='10px'
+                        a.style.margin ='0 10px 0 5px'
                     })
                     for(var i=12;i<16;i++){
                         element[i].style.display = 'block'
                     }
                 make_slide(4)
-
                 }
                 else{
-                    heading.forEach((b)=>{
-                        b.style.display ='none'
-                    })
-                    bodymenu.style.display = 'none'
-                    content1.style.width =`${window.innerWidth-10}px`
-                    element.forEach((a)=> {
-                        a.style.width = `${content1.offsetWidth/3-40}px`
-                        a.style.marginLeft ='10px'
-                    })
-                    for(var i=12;i<16;i++){
-                        element[i].style.display = 'none'
+                    if(window.innerWidth>=500){
+                        boxleft.style.display = `none`
+                        boxright.style.display = `none`
+                        bodymenu.style.display = 'none'
+                        reviewdiv.style.margin = `10px`
+                        content[1].style.margin = `10px `
+                        content[0].style.margin = `10px ` 
+                        btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+                        content1.style.width =`${window.innerWidth-10}px`
+                        last.style.top = '1550px'
+                        last.style.left = '50px'
+                        heading.forEach((b)=>{
+                            b.style.display ='none'
+                        })
+                        bodymenu.style.display = 'none'
+                        content1.style.width =`${window.innerWidth-10}px`
+                        element.forEach((a)=> {
+                            a.style.width = `${content1.offsetWidth/3-40}px`
+                            a.style.marginLeft ='10px'
+                        })
+                        for(var i=12;i<16;i++){
+                            element[i].style.display = 'none'
+                        }
+                        make_slide(3)  
                     }
-                make_slide(3)  
+                    else{
+                        boxleft.style.display = `none`
+                        boxright.style.display = `none`
+                        bodymenu.style.display = 'none'
+                        reviewdiv.style.margin = `10px`
+                        content[1].style.margin = `10px `
+                        content[0].style.margin = `10px ` 
+                        btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+                        content1.style.width =`${window.innerWidth-10}px`
+                        last.style.top = '2100px'
+                        last.style.left = '0'
+                        heading.forEach((b)=>{
+                            b.style.display ='none'
+                        })
+                        bodymenu.style.display = 'none'
+                        content1.style.width =`${window.innerWidth-10}px`
+                        element.forEach((a)=> {
+                            a.style.width = `${content1.offsetWidth/2-40}px`
+                            a.style.marginLeft ='10px'
+                        })
+                        for(var i=12;i<16;i++){
+                            element[i].style.display = 'none'
+                        }
+                        make_slide(2)  
+                    }
                 }
             }
         }
@@ -234,6 +286,7 @@ document.addEventListener('DOMContentLoaded',function(){
             bodymenu.style.right = `${(window.innerWidth-854)/2-15}px`
             user.style.right = `${(window.innerWidth-854)/2}px`
             last.style.left = `${(window.innerWidth-854)/2+50}px`
+            last.style.top = '1550px'
             element.forEach((a)=> {
                 a.style.width = `${content1.offsetWidth/4-15}px`
                 a.style.marginLeft ='5px'
@@ -247,6 +300,8 @@ document.addEventListener('DOMContentLoaded',function(){
             })
             bodymenu.style.display = 'block'
             make_slide(5)
+            boxleft.style.display = `block`
+            boxright.style.display = `block`
 
         }
         else {
@@ -261,9 +316,12 @@ document.addEventListener('DOMContentLoaded',function(){
             bodymenu.style.right = `${(window.innerWidth-854)/2}px`
             user.style.right = `${(window.innerWidth-854)/2}px`
             last.style.left = `${(window.innerWidth-854)/2+50}px`
+            last.style.top = '1550px'
             content1.style.width =`${window.innerWidth-boxleft.offsetWidth*2-254}px`
             element.forEach((a)=> {
-                a.style.width = `${content1.offsetWidth/3-40}px`
+                a.style.width = `${content1.offsetWidth/3-30}px`
+                a.style.margin ='0 10px 0 5px'
+
             })
             for(var i=12;i<16;i++){
                 element[i].style.display = 'none'
@@ -273,6 +331,8 @@ document.addEventListener('DOMContentLoaded',function(){
             })
             bodymenu.style.display = 'block'
             make_slide(4)
+            boxleft.style.display = `block`
+            boxright.style.display = `block`
 
             }
             else{
@@ -290,36 +350,64 @@ document.addEventListener('DOMContentLoaded',function(){
                     content1.style.width =`${window.innerWidth-10}px`
                     element.forEach((a)=> {
                         a.style.width = `${content1.offsetWidth/4-40}px`
-                        a.style.marginLeft ='10px'
+                        a.style.margin ='0 10px 0 5px'
                     })
                     for(var i=12;i<16;i++){
                         element[i].style.display = 'block'
                     }
                 make_slide(4)
-
                 }
                 else{
-                    boxleft.style.display = `none`
-                    boxright.style.display = `none`
-                    bodymenu.style.display = 'none'
-                    reviewdiv.style.margin = `10px`
-                    content[1].style.margin = `10px `
-                    content[0].style.margin = `10px ` 
-                    btnright.style.right = `${(window.innerWidth-854)/2-5}px`
-                    content1.style.width =`${window.innerWidth-10}px`
-                    heading.forEach((b)=>{
-                        b.style.display ='none'
-                    })
-                    bodymenu.style.display = 'none'
-                    content1.style.width =`${window.innerWidth-10}px`
-                    element.forEach((a)=> {
-                        a.style.width = `${content1.offsetWidth/3-40}px`
-                        a.style.marginLeft ='10px'
-                    })
-                    for(var i=12;i<16;i++){
-                        element[i].style.display = 'none'
+                    if(window.innerWidth>=500){
+                        boxleft.style.display = `none`
+                        boxright.style.display = `none`
+                        bodymenu.style.display = 'none'
+                        reviewdiv.style.margin = `10px`
+                        content[1].style.margin = `10px `
+                        content[0].style.margin = `10px ` 
+                        btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+                        content1.style.width =`${window.innerWidth-10}px`
+                        last.style.top = '1550px'
+                        last.style.left = '50px'
+                        heading.forEach((b)=>{
+                            b.style.display ='none'
+                        })
+                        bodymenu.style.display = 'none'
+                        content1.style.width =`${window.innerWidth-10}px`
+                        element.forEach((a)=> {
+                            a.style.width = `${content1.offsetWidth/3-40}px`
+                            a.style.marginLeft ='10px'
+                        })
+                        for(var i=12;i<16;i++){
+                            element[i].style.display = 'none'
+                        }
+                        make_slide(3)  
                     }
-                make_slide(3)  
+                    else{
+                        boxleft.style.display = `none`
+                        boxright.style.display = `none`
+                        bodymenu.style.display = 'none'
+                        reviewdiv.style.margin = `10px`
+                        content[1].style.margin = `10px `
+                        content[0].style.margin = `10px ` 
+                        btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+                        content1.style.width =`${window.innerWidth-10}px`
+                        last.style.top = '2100px'
+                        last.style.left = '0'
+                        heading.forEach((b)=>{
+                            b.style.display ='none'
+                        })
+                        bodymenu.style.display = 'none'
+                        content1.style.width =`${window.innerWidth-10}px`
+                        element.forEach((a)=> {
+                            a.style.width = `${content1.offsetWidth/2-30}px`
+                            a.style.marginLeft ='10px'
+                        })
+                        for(var i=12;i<16;i++){
+                            element[i].style.display = 'none'
+                        }
+                        make_slide(2)  
+                    }
                 }
             }
         }
