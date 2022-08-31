@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded',function(){
             last.style.top = '1550px'
             boxmenu.style.display = 'none'
             newmenu.style.display =' none'
-
+            content1.style.width =`610px`
             element.forEach((a)=> {
                 a.style.width = `${content1.offsetWidth/4-15}px`
                 a.style.margin ='0 5px 0 5px'
@@ -184,8 +184,7 @@ document.addEventListener('DOMContentLoaded',function(){
             last.style.top = '1550px'
             boxmenu.style.display = 'none'
             newmenu.style.display =' none'
-
-            content1.style.width =`${window.innerWidth-boxleft.offsetWidth*2-254}px`
+            content1.style.width =`610px`
             element.forEach((a)=> {
                 a.style.width = `${content1.offsetWidth/3-40}px`
             })
