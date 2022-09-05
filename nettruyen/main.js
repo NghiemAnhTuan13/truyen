@@ -135,6 +135,8 @@ var heading = document.querySelectorAll('.inner770')
 var close = document.querySelector('.close')
 var newmenu = document.querySelector('.newmenu')
 var boxmenu = document.querySelector('.boxmenu')
+var elementlm0 = document.querySelectorAll('.elementlm0')
+var elementlm = document.querySelectorAll('.elementlm')
 document.addEventListener('DOMContentLoaded',function(){
     window.addEventListener('resize',function(){
         if(window.innerWidth >= 1250){
@@ -158,6 +160,9 @@ document.addEventListener('DOMContentLoaded',function(){
 
             })
             for(var i=12;i<16;i++){
+                element[i].style.display = 'block'
+            }
+            for(var i=6;i<12;i++){
                 element[i].style.display = 'block'
             }
             heading.forEach((b)=>{
@@ -190,6 +195,9 @@ document.addEventListener('DOMContentLoaded',function(){
             })
             for(var i=12;i<16;i++){
                 element[i].style.display = 'none'
+            }
+            for(var i=6;i<12;i++){
+                element[i].style.display = 'block'
             }
             heading.forEach((b)=>{
                 b.style.display ='inline-block'
@@ -232,6 +240,9 @@ document.addEventListener('DOMContentLoaded',function(){
                     for(var i=12;i<16;i++){
                         element[i].style.display = 'block'
                     }
+                    for(var i=6;i<12;i++){
+                        element[i].style.display = 'block'
+                    }
                 make_slide(4)
                 }
                 else{
@@ -258,32 +269,65 @@ document.addEventListener('DOMContentLoaded',function(){
                         for(var i=12;i<16;i++){
                             element[i].style.display = 'none'
                         }
+                        for(var i=6;i<12;i++){
+                            element[i].style.display = 'block'
+                        }
                         make_slide(3)  
                     }
-                    else{
-                        boxleft.style.display = `none`
-                        boxright.style.display = `none`
-                        bodymenu.style.display = 'none'
-                        reviewdiv.style.margin = `10px`
-                        content[1].style.margin = `10px `
-                        content[0].style.margin = `0 0 0 20px ` 
-                        btnright.style.right = `10px`
-                        content1.style.width =`${window.innerWidth-10}px`
-                        last.style.top = '2100px'
-                        last.style.left = '0'
-                        heading.forEach((b)=>{
-                            b.style.display ='none'
-                        })
-                        bodymenu.style.display = 'none'
-                        content1.style.width =`${window.innerWidth-10}px`
-                        element.forEach((a)=> {
-                            a.style.width = `${content1.offsetWidth/2-40}px`
-                            a.style.marginLeft ='10px'
-                        })
-                        for(var i=12;i<16;i++){
-                            element[i].style.display = 'none'
+                    else {
+                        if(window.innerWidth>=300){
+                            boxleft.style.display = `none`
+                            boxright.style.display = `none`
+                            bodymenu.style.display = 'none'
+                            reviewdiv.style.margin = `10px`
+                            content[1].style.margin = `10px `
+                            content[0].style.margin = `0 0 0 20px ` 
+                            btnright.style.right = `10px`
+                            content1.style.width =`${window.innerWidth-10}px`
+                            last.style.top = '2100px'
+                            last.style.left = '0'
+                            heading.forEach((b)=>{
+                                b.style.display ='none'
+                            })
+                            bodymenu.style.display = 'none'
+                            content1.style.width =`${window.innerWidth-10}px`
+                            element.forEach((a)=> {
+                                a.style.width = `${content1.offsetWidth/2-40}px`
+                                a.style.marginLeft ='10px'
+                            })
+                            for(var i=12;i<16;i++){
+                                element[i].style.display = 'none'
+                            }
+                            for(var i=6;i<12;i++){
+                                element[i].style.display = 'block'
+                            }
+                            make_slide(2)  
                         }
-                        make_slide(2)  
+                        else{
+                                boxleft.style.display = `none`
+                                boxright.style.display = `none`
+                                bodymenu.style.display = 'none'
+                                reviewdiv.style.margin = `10px`
+                                content[1].style.margin = `10px `
+                                content[0].style.margin = `0 0 0 20px ` 
+                                btnright.style.right = `10px`
+                                content1.style.width =`${window.innerWidth-10}px`
+                                last.style.top = '2100px'
+                                last.style.left = '0'
+                                heading.forEach((b)=>{
+                                    b.style.display ='none'
+                                })
+                                bodymenu.style.display = 'none'
+                                content1.style.width =`${window.innerWidth-10}px`
+                                element.forEach((a)=> {
+                                    a.style.width = `${content1.offsetWidth/1-40}px`
+                                    a.style.marginLeft ='10px'
+                                })
+                                for(var i=6;i<16;i++){
+                                    element[i].style.display = 'none'
+                                }
+                                make_slide(1)  
+                        }
                     }
                 }
             }
@@ -312,6 +356,9 @@ document.addEventListener('DOMContentLoaded',function(){
 
             })
             for(var i=12;i<16;i++){
+                element[i].style.display = 'block'
+            }
+            for(var i=6;i<12;i++){
                 element[i].style.display = 'block'
             }
             heading.forEach((b)=>{
@@ -347,6 +394,9 @@ document.addEventListener('DOMContentLoaded',function(){
             })
             for(var i=12;i<16;i++){
                 element[i].style.display = 'none'
+            }
+            for(var i=6;i<12;i++){
+                element[i].style.display = 'block'
             }
             heading.forEach((b)=>{
                 b.style.display ='inline-block'
@@ -385,6 +435,9 @@ document.addEventListener('DOMContentLoaded',function(){
                     for(var i=12;i<16;i++){
                         element[i].style.display = 'block'
                     }
+                    for(var i=6;i<12;i++){
+                        element[i].style.display = 'block'
+                    }
                 make_slide(4)
                 }
                 else{
@@ -411,32 +464,66 @@ document.addEventListener('DOMContentLoaded',function(){
                         for(var i=12;i<16;i++){
                             element[i].style.display = 'none'
                         }
+                        for(var i=6;i<12;i++){
+                            element[i].style.display = 'block'
+                        }
                         make_slide(3)  
                     }
                     else{
-                        boxleft.style.display = `none`
-                        boxright.style.display = `none`
-                        bodymenu.style.display = 'none'
-                        reviewdiv.style.margin = `10px`
-                        content[1].style.margin = `10px `
-                        content[0].style.margin = `0 0 0 20px ` 
-                        btnright.style.right = `10px`
-                        content1.style.width =`${window.innerWidth-10}px`
-                        last.style.top = '2100px'
-                        last.style.left = '0'
-                        heading.forEach((b)=>{
-                            b.style.display ='none'
-                        })
-                        bodymenu.style.display = 'none'
-                        content1.style.width =`${window.innerWidth-10}px`
-                        element.forEach((a)=> {
-                            a.style.width = `${content1.offsetWidth/2-30}px`
-                            a.style.marginLeft ='10px'
-                        })
-                        for(var i=12;i<16;i++){
-                            element[i].style.display = 'none'
+                        if(window.innerWidth>=300){
+                            boxleft.style.display = `none`
+                            boxright.style.display = `none`
+                            bodymenu.style.display = 'none'
+                            reviewdiv.style.margin = `10px`
+                            content[1].style.margin = `10px `
+                            content[0].style.margin = `0 0 0 20px ` 
+                            btnright.style.right = `10px`
+                            content1.style.width =`${window.innerWidth-10}px`
+                            last.style.top = '2100px'
+                            last.style.left = '0'
+                            heading.forEach((b)=>{
+                                b.style.display ='none'
+                            })
+                            bodymenu.style.display = 'none'
+                            content1.style.width =`${window.innerWidth-10}px`
+                            element.forEach((a)=> {
+                                a.style.width = `${content1.offsetWidth/2-40}px`
+                                a.style.marginLeft ='10px'
+                            })
+                            for(var i=12;i<16;i++){
+                                element[i].style.display = 'none'
+                            }
+                            for(var i=6;i<12;i++){
+                                element[i].style.display = 'block'
+                            }
+
+                            make_slide(2)  
                         }
-                        make_slide(2)  
+                        else{
+                                boxleft.style.display = `none`
+                                boxright.style.display = `none`
+                                bodymenu.style.display = 'none'
+                                reviewdiv.style.margin = `10px`
+                                content[1].style.margin = `10px `
+                                content[0].style.margin = `0 0 0 20px ` 
+                                btnright.style.right = `10px`
+                                content1.style.width =`${window.innerWidth-10}px`
+                                last.style.top = '2100px'
+                                last.style.left = '0'
+                                heading.forEach((b)=>{
+                                    b.style.display ='none'
+                                })
+                                bodymenu.style.display = 'none'
+                                content1.style.width =`${window.innerWidth-10}px`
+                                element.forEach((a)=> {
+                                    a.style.width = `${content1.offsetWidth/1-40}px`
+                                    a.style.marginLeft ='10px'
+                                })
+                                for(var i=6;i<16;i++){
+                                    element[i].style.display = 'none'
+                                }
+                                make_slide(1)  
+                        }
                     }
                 }
             }

@@ -50,8 +50,7 @@ li{
     position: absolute;
     top: 15px;
 }
-.content .user{
-    float: left;
+.user{
     height: 50px;
     color: #FFF;
     line-height: 50px;
@@ -61,7 +60,7 @@ li{
     right : 200px;
     z-index: 4;
 }
-.content .user0{
+.user0{
     line-height: 25px;
     list-style: none;
     display: none;
@@ -70,18 +69,20 @@ li{
     font-size: 17px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     position: relative;
-    left:0px;
+    left : 0px;
     z-index: 10;
+    width: 200px;
 }
 .user0>i{
     font-size: 5px;
     padding-top: -2px;
 }
-.user:hover>.user0{
+.user:hover .user0{
     display: block;
 }
-.light:hover{
+.user:hover{
     cursor: pointer;
+    left: 964px;
 }
 .heading2{
     height: 40px;
@@ -386,4 +387,14 @@ li{
     top: 10px;
     right: 10px;
 
+}
+body{
+    overflow-x: hidden;
+}
+@media only screen and (max-width : 900px){
+    .searchbtn{
+        position: absolute;
+        right: 50px;
+        top : 10px;
+    }
 }
