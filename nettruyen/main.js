@@ -8,7 +8,7 @@ function make_slide(amountSlideAppear){
     let widthallbox = widthitemanhmargin * listbox.length;
     let count = 0
     let spacing = widthallbox - amountSlideAppear*widthitemanhmargin
-        wrapperbox.style.width = `${widthallbox-widthitemanhmargin*2}px`
+        wrapperbox.style.width = `${widthallbox}px`
         listbox.forEach((e) =>{
             e.style.marginRight = '10px'
             e.style.marginLeft = '10px'
@@ -20,18 +20,8 @@ function make_slide(amountSlideAppear){
         if (count > spacing+1){
             count = 0;
         }
-        if (count < widthitemanhmargin*2){
-            wrapperbox.style.width = `${widthallbox-widthitemanhmargin*2}px`
-            listbox[7].style.display='none'
-            listbox[6].style.display='none'
-            wrapperbox.style.transform = `translateX(${-count}px)`
-        }
         else{
             wrapperbox.style.transform = `translateX(${-count}px)`
-            wrapperbox.style.width = `${widthallbox}px`
-            listbox[7].style.display='block'
-            listbox[6].style.display='block'
-
         }
     setTimeout(auto,10000)
     }
@@ -41,18 +31,11 @@ function make_slide(amountSlideAppear){
         if (count > spacing){
             count = 0;
         }
-        if (count < widthitemanhmargin*2){
-            wrapperbox.style.width = `${widthallbox-widthitemanhmargin*2}px`
-            listbox[7].style.display='none'
-            listbox[6].style.display='none'
+        if (count < widthitemanhmargin){
             wrapperbox.style.transform = `translateX(${-count}px)`
         }
         else{
-            wrapperbox.style.width = `${widthallbox}px`
             wrapperbox.style.transform = `translateX(${-count}px)`
-            listbox[7].style.display='block'
-            listbox[6].style.display='block'
-
         }
     })
     btnleft.addEventListener('click',function(){
@@ -60,27 +43,14 @@ function make_slide(amountSlideAppear){
         if (count < -1){
             count = spacing;
         }
-        if ( count <= widthitemanhmargin*2){
-            wrapperbox.style.width = `${widthallbox-widthitemanhmargin*2}px`
+        if ( count <= widthitemanhmargin){
             wrapperbox.style.transform = `translateX(${-count}px)`
-            listbox[7].style.display='none'
-            if(count.toFixed(1)== widthitemanhmargin*2){
-                wrapperbox.style.width = `${widthallbox-widthitemanhmargin}px`
-                listbox[6].style.display='block'
-            }
-            else{
-                listbox[6].style.display='none'
-            }
         }
         else{
-            wrapperbox.style.width = `${widthallbox}px`
-            listbox[7].style.display='block'
-            listbox[6].style.display='block'
             wrapperbox.style.transform = `translateX(${-count}px)`
         }
     })
 }
-make_slide(5)
 var top0= document.querySelectorAll('.htop')
 var top1= document.querySelector('.ctop1')
 var top2= document.querySelector('.ctop2')
@@ -157,7 +127,7 @@ document.addEventListener('DOMContentLoaded',function(){
             element.forEach((a)=> {
                 a.style.width = `${content1.offsetWidth/4-15}px`
                 a.style.margin ='0 5px 0 5px'
-
+    
             })
             for(var i=12;i<16;i++){
                 element[i].style.display = 'block'
@@ -172,14 +142,14 @@ document.addEventListener('DOMContentLoaded',function(){
             make_slide(5)
             boxleft.style.display = `block`
             boxright.style.display = `block`
-
+    
         }
         else {
             if (window.innerWidth >= 900){
             boxleft.style.width = `${(window.innerWidth-854)/2-5}px`
             boxright.style.width = `${(window.innerWidth-854)/2-5}px`
             reviewdiv.style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
-            content[1].style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
+            content[1].style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2+20}px`
             content[0].style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
             menu.style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
             btnright.style.right = `${(window.innerWidth-854)/2-5}px`
@@ -206,7 +176,7 @@ document.addEventListener('DOMContentLoaded',function(){
             make_slide(4)
             boxleft.style.display = `block`
             boxright.style.display = `block`
-
+    
             }
             else{
                 boxmenu.style.display = 'block'
@@ -227,12 +197,14 @@ document.addEventListener('DOMContentLoaded',function(){
                     boxright.style.display = `none`
                     bodymenu.style.display = 'none'
                     reviewdiv.style.margin = `10px`
-                    content[1].style.margin = `10px `
+                    content[1].style.margin = `0 0 0 30px`
                     content[0].style.margin = `0 0 0 100px ` 
                     btnright.style.right = `10px`
-                    content1.style.width =`${window.innerWidth-10}px`
+                    content1.style.width =`610px`
+                    content[1].style.width =`${window.innerWidth-40}px`
+                    content[0].style.width =`${window.innerWidth-100}px`
+                    content1.style.width =`${window.innerWidth-30}px`
                     last.style.top = '1550px'
-
                     element.forEach((a)=> {
                         a.style.width = `${content1.offsetWidth/4-40}px`
                         a.style.margin ='0 10px 0 5px'
@@ -251,17 +223,18 @@ document.addEventListener('DOMContentLoaded',function(){
                         boxright.style.display = `none`
                         bodymenu.style.display = 'none'
                         reviewdiv.style.margin = `10px`
-                        content[1].style.margin = `10px `
+                        content[1].style.margin = `0 0 0 30px `
                         content[0].style.margin = `0 0 0 100px ` 
                         btnright.style.right = `10px`
-                        content1.style.width =`${window.innerWidth-10}px`
+                        content[1].style.width =`${window.innerWidth-60}px`
+                        content[0].style.width =`${window.innerWidth-100}px`
                         last.style.top = '1550px'
                         last.style.left = '50px'
                         heading.forEach((b)=>{
                             b.style.display ='none'
                         })
                         bodymenu.style.display = 'none'
-                        content1.style.width =`${window.innerWidth-10}px`
+                        content1.style.width =`${window.innerWidth-30}px`
                         element.forEach((a)=> {
                             a.style.width = `${content1.offsetWidth/3-40}px`
                             a.style.marginLeft ='10px'
@@ -275,22 +248,24 @@ document.addEventListener('DOMContentLoaded',function(){
                         make_slide(3)  
                     }
                     else {
-                        if(window.innerWidth>=300){
+                        if(window.innerWidth>=350){
                             boxleft.style.display = `none`
                             boxright.style.display = `none`
                             bodymenu.style.display = 'none'
                             reviewdiv.style.margin = `10px`
-                            content[1].style.margin = `10px `
+                            content[1].style.margin = `0 0 0 20px `
                             content[0].style.margin = `0 0 0 20px ` 
                             btnright.style.right = `10px`
-                            content1.style.width =`${window.innerWidth-10}px`
+                            content[1].style.width =`${window.innerWidth-20}px`
+                            content[0].style.width =`${window.innerWidth-20}px`
+                            content1.style.width =`${window.innerWidth-30}px`
                             last.style.top = '2100px'
-                            last.style.left = '0'
+                            last.style.left = '30px'
+
                             heading.forEach((b)=>{
                                 b.style.display ='none'
                             })
                             bodymenu.style.display = 'none'
-                            content1.style.width =`${window.innerWidth-10}px`
                             element.forEach((a)=> {
                                 a.style.width = `${content1.offsetWidth/2-40}px`
                                 a.style.marginLeft ='10px'
@@ -308,17 +283,19 @@ document.addEventListener('DOMContentLoaded',function(){
                                 boxright.style.display = `none`
                                 bodymenu.style.display = 'none'
                                 reviewdiv.style.margin = `10px`
-                                content[1].style.margin = `10px `
+                                content[1].style.margin = `0 0 0 15px `
                                 content[0].style.margin = `0 0 0 20px ` 
                                 btnright.style.right = `10px`
-                                content1.style.width =`${window.innerWidth-10}px`
-                                last.style.top = '2100px'
-                                last.style.left = '0'
+                                content[1].style.width =`${window.innerWidth-15}px`
+                                content[0].style.width =`${window.innerWidth-20}px`
+                                content1.style.width =`${window.innerWidth-30}px`
+                                last.style.top = `'2090px`
+                                last.style.left = '30px'
+    
                                 heading.forEach((b)=>{
                                     b.style.display ='none'
                                 })
                                 bodymenu.style.display = 'none'
-                                content1.style.width =`${window.innerWidth-10}px`
                                 element.forEach((a)=> {
                                     a.style.width = `${content1.offsetWidth/1-40}px`
                                     a.style.marginLeft ='10px'
@@ -335,130 +312,165 @@ document.addEventListener('DOMContentLoaded',function(){
     })
 })
 document.addEventListener('DOMContentLoaded',function(){
-        if(window.innerWidth >= 1250){
-            boxleft.style.width = `${(window.innerWidth-854)/2-15}px`
-            boxright.style.width = `${(window.innerWidth-854)/2-15}px`
-            reviewdiv.style.margin = `0 ${(window.innerWidth-854)/2-15}px 0 ${(window.innerWidth-854)/2-15}px`
-            content[1].style.margin = `0 ${(window.innerWidth-854)/2-15}px 0 ${(window.innerWidth-854)/2-15}px`
-            content[0].style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
-            menu.style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
-            btnright.style.right = `${(window.innerWidth-854)/2-5}px`
-            bodymenu.style.right = `${(window.innerWidth-854)/2-15}px`
-            user.style.right = `${(window.innerWidth-854)/2}px`
-            last.style.left = `${(window.innerWidth-854)/2+50}px`
-            last.style.top = '1550px'
-            boxmenu.style.display = 'none'
-            newmenu.style.display =' none'
+    if(window.innerWidth >= 1250){
+        boxleft.style.width = `${(window.innerWidth-854)/2-15}px`
+        boxright.style.width = `${(window.innerWidth-854)/2-15}px`
+        reviewdiv.style.margin = `0 ${(window.innerWidth-854)/2-15}px 0 ${(window.innerWidth-854)/2-15}px`
+        content[1].style.margin = `0 ${(window.innerWidth-854)/2-15}px 0 ${(window.innerWidth-854)/2-15}px`
+        content[0].style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
+        menu.style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
+        btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+        bodymenu.style.right = `${(window.innerWidth-854)/2-15}px`
+        user.style.right = `${(window.innerWidth-854)/2}px`
+        last.style.left = `${(window.innerWidth-854)/2+50}px`
+        last.style.top = '1550px'
+        boxmenu.style.display = 'none'
+        newmenu.style.display =' none'
+        content1.style.width =`610px`
+        element.forEach((a)=> {
+            a.style.width = `${content1.offsetWidth/4-15}px`
+            a.style.margin ='0 5px 0 5px'
 
-            element.forEach((a)=> {
-                a.style.width = `${content1.offsetWidth/4-15}px`
-                a.style.marginLeft ='5px'
+        })
+        for(var i=12;i<16;i++){
+            element[i].style.display = 'block'
+        }
+        for(var i=6;i<12;i++){
+            element[i].style.display = 'block'
+        }
+        heading.forEach((b)=>{
+            b.style.display ='inline-block'
+        })
+        bodymenu.style.display = 'block'
+        make_slide(5)
+        boxleft.style.display = `block`
+        boxright.style.display = `block`
 
-            })
-            for(var i=12;i<16;i++){
-                element[i].style.display = 'block'
-            }
-            for(var i=6;i<12;i++){
-                element[i].style.display = 'block'
-            }
-            heading.forEach((b)=>{
-                b.style.display ='inline-block'
-            })
-            bodymenu.style.display = 'block'
-            make_slide(5)
-            boxleft.style.display = `block`
-            boxright.style.display = `block`
+    }
+    else {
+        if (window.innerWidth >= 900){
+        boxleft.style.width = `${(window.innerWidth-854)/2-5}px`
+        boxright.style.width = `${(window.innerWidth-854)/2-5}px`
+        reviewdiv.style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
+        content[1].style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2+20}px`
+        content[0].style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
+        menu.style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
+        btnright.style.right = `${(window.innerWidth-854)/2-5}px`
+        bodymenu.style.right = `${(window.innerWidth-854)/2}px`
+        user.style.right = `${(window.innerWidth-854)/2}px`
+        last.style.left = `${(window.innerWidth-854)/2+50}px`
+        last.style.top = '1550px'
+        boxmenu.style.display = 'none'
+        newmenu.style.display =' none'
+        content1.style.width =`610px`
+        element.forEach((a)=> {
+            a.style.width = `${content1.offsetWidth/3-40}px`
+        })
+        for(var i=12;i<16;i++){
+            element[i].style.display = 'none'
+        }
+        for(var i=6;i<12;i++){
+            element[i].style.display = 'block'
+        }
+        heading.forEach((b)=>{
+            b.style.display ='inline-block'
+        })
+        bodymenu.style.display = 'block'
+        make_slide(4)
+        boxleft.style.display = `block`
+        boxright.style.display = `block`
 
         }
-        else {
-            if (window.innerWidth >= 900){
-            boxleft.style.width = `${(window.innerWidth-854)/2-5}px`
-            boxright.style.width = `${(window.innerWidth-854)/2-5}px`
-            reviewdiv.style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
-            content[1].style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
-            content[0].style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
-            menu.style.margin = `0 ${(window.innerWidth-854)/2-5}px 0 ${(window.innerWidth-854)/2-5}px`
-            btnright.style.right = `${(window.innerWidth-854)/2-5}px`
-            bodymenu.style.right = `${(window.innerWidth-854)/2}px`
-            user.style.right = `${(window.innerWidth-854)/2}px`
-            last.style.left = `${(window.innerWidth-854)/2+50}px`
-            last.style.top = '1550px'
-            boxmenu.style.display = 'none'
-            newmenu.style.display =' none'
-            
-            content1.style.width =`${window.innerWidth-boxleft.offsetWidth*2-254}px`
-            element.forEach((a)=> {
-                a.style.width = `${content1.offsetWidth/3-30}px`
-                a.style.margin ='0 10px 0 5px'
-
+        else{
+            boxmenu.style.display = 'block'
+            close.addEventListener('click',function(){
+                newmenu.style.display =' none'
             })
-            for(var i=12;i<16;i++){
-                element[i].style.display = 'none'
-            }
-            for(var i=6;i<12;i++){
-                element[i].style.display = 'block'
-            }
+            boxmenu.addEventListener('click',function(){
+                newmenu.style.display =' block'
+            })
             heading.forEach((b)=>{
-                b.style.display ='inline-block'
+                b.style.display ='none'
             })
-            bodymenu.style.display = 'block'
-            make_slide(4)
-            boxleft.style.display = `block`
-            boxright.style.display = `block`
+            heading.forEach((b)=>{
+                b.style.display ='none'
+            })
+            if(window.innerWidth >= 700){
+                boxleft.style.display = `none`
+                boxright.style.display = `none`
+                bodymenu.style.display = 'none'
+                reviewdiv.style.margin = `10px`
+                content[1].style.margin = `0 0 0 30px`
+                content[0].style.margin = `0 0 0 100px ` 
+                btnright.style.right = `10px`
+                content1.style.width =`610px`
+                content[1].style.width =`${window.innerWidth-40}px`
+                content[0].style.width =`${window.innerWidth-100}px`
+                content1.style.width =`${window.innerWidth-30}px`
+                last.style.top = '1550px'
 
+                element.forEach((a)=> {
+                    a.style.width = `${content1.offsetWidth/4-40}px`
+                    a.style.margin ='0 10px 0 5px'
+                })
+                for(var i=12;i<16;i++){
+                    element[i].style.display = 'block'
+                }
+                for(var i=6;i<12;i++){
+                    element[i].style.display = 'block'
+                }
+            make_slide(4)
             }
             else{
-                boxmenu.style.display = 'block'
-                close.addEventListener('click',function(){
-                    newmenu.style.display =' none'
-                })
-                boxmenu.addEventListener('click',function(){
-                    newmenu.style.display =' block'
-                })
-                heading.forEach((b)=>{
-                    b.style.display ='none'
-                })
-                if(window.innerWidth >= 700){
+                if(window.innerWidth>=500){
                     boxleft.style.display = `none`
                     boxright.style.display = `none`
                     bodymenu.style.display = 'none'
                     reviewdiv.style.margin = `10px`
-                    content[1].style.margin = `10px `
+                    content[1].style.margin = `0 0 0 30px `
                     content[0].style.margin = `0 0 0 100px ` 
                     btnright.style.right = `10px`
-                    content1.style.width =`${window.innerWidth-10}px`
-
+                    content[1].style.width =`${window.innerWidth-60}px`
+                    content[0].style.width =`${window.innerWidth-100}px`
+                    last.style.top = '1550px'
+                    last.style.left = '50px'
+                    heading.forEach((b)=>{
+                        b.style.display ='none'
+                    })
+                    bodymenu.style.display = 'none'
+                    content1.style.width =`${window.innerWidth-30}px`
                     element.forEach((a)=> {
-                        a.style.width = `${content1.offsetWidth/4-40}px`
-                        a.style.margin ='0 10px 0 5px'
+                        a.style.width = `${content1.offsetWidth/3-40}px`
+                        a.style.marginLeft ='10px'
                     })
                     for(var i=12;i<16;i++){
-                        element[i].style.display = 'block'
+                        element[i].style.display = 'none'
                     }
                     for(var i=6;i<12;i++){
                         element[i].style.display = 'block'
                     }
-                make_slide(4)
+                    make_slide(3)  
                 }
-                else{
-                    if(window.innerWidth>=500){
+                else {
+                    if(window.innerWidth>=350){
                         boxleft.style.display = `none`
                         boxright.style.display = `none`
                         bodymenu.style.display = 'none'
                         reviewdiv.style.margin = `10px`
-                        content[1].style.margin = `10px `
-                        content[0].style.margin = `0 0 0 100px ` 
+                        content[1].style.margin = `0 0 0 20px `
+                        content[0].style.margin = `0 0 0 20px ` 
                         btnright.style.right = `10px`
-                        content1.style.width =`${window.innerWidth-10}px`
-                        last.style.top = '1550px'
-                        last.style.left = '50px'
+                        content[1].style.width =`${window.innerWidth-20}px`
+                        content[0].style.width =`${window.innerWidth-20}px`
+                        content1.style.width =`${window.innerWidth-30}px`
+                        last.style.top = '2100px'
+                        last.style.left = '30px'
                         heading.forEach((b)=>{
                             b.style.display ='none'
                         })
                         bodymenu.style.display = 'none'
-                        content1.style.width =`${window.innerWidth-10}px`
                         element.forEach((a)=> {
-                            a.style.width = `${content1.offsetWidth/3-40}px`
+                            a.style.width = `${content1.offsetWidth/2-40}px`
                             a.style.marginLeft ='10px'
                         })
                         for(var i=12;i<16;i++){
@@ -467,65 +479,38 @@ document.addEventListener('DOMContentLoaded',function(){
                         for(var i=6;i<12;i++){
                             element[i].style.display = 'block'
                         }
-                        make_slide(3)  
+                        make_slide(2)  
                     }
                     else{
-                        if(window.innerWidth>=300){
                             boxleft.style.display = `none`
                             boxright.style.display = `none`
                             bodymenu.style.display = 'none'
                             reviewdiv.style.margin = `10px`
-                            content[1].style.margin = `10px `
+                            content[1].style.margin = `0 0 0 15px `
                             content[0].style.margin = `0 0 0 20px ` 
                             btnright.style.right = `10px`
-                            content1.style.width =`${window.innerWidth-10}px`
-                            last.style.top = '2100px'
-                            last.style.left = '0'
+                            content[1].style.width =`${window.innerWidth-15}px`
+                            content[0].style.width =`${window.innerWidth-20}px`
+                            content1.style.width =`${window.innerWidth-30}px`
+                            last.style.top = '2090px'
+                            last.style.left = '30px'
+
+
                             heading.forEach((b)=>{
                                 b.style.display ='none'
                             })
                             bodymenu.style.display = 'none'
-                            content1.style.width =`${window.innerWidth-10}px`
                             element.forEach((a)=> {
-                                a.style.width = `${content1.offsetWidth/2-40}px`
+                                a.style.width = `${content1.offsetWidth/1-40}px`
                                 a.style.marginLeft ='10px'
                             })
-                            for(var i=12;i<16;i++){
+                            for(var i=6;i<16;i++){
                                 element[i].style.display = 'none'
                             }
-                            for(var i=6;i<12;i++){
-                                element[i].style.display = 'block'
-                            }
-
-                            make_slide(2)  
-                        }
-                        else{
-                                boxleft.style.display = `none`
-                                boxright.style.display = `none`
-                                bodymenu.style.display = 'none'
-                                reviewdiv.style.margin = `10px`
-                                content[1].style.margin = `10px `
-                                content[0].style.margin = `0 0 0 20px ` 
-                                btnright.style.right = `10px`
-                                content1.style.width =`${window.innerWidth-10}px`
-                                last.style.top = '2100px'
-                                last.style.left = '0'
-                                heading.forEach((b)=>{
-                                    b.style.display ='none'
-                                })
-                                bodymenu.style.display = 'none'
-                                content1.style.width =`${window.innerWidth-10}px`
-                                element.forEach((a)=> {
-                                    a.style.width = `${content1.offsetWidth/1-40}px`
-                                    a.style.marginLeft ='10px'
-                                })
-                                for(var i=6;i<16;i++){
-                                    element[i].style.display = 'none'
-                                }
-                                make_slide(1)  
-                        }
+                            make_slide(1)  
                     }
                 }
             }
         }
+    }
 })

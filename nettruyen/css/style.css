@@ -145,9 +145,6 @@ li{
 }
 .slide{
     float: left;
-    margin-right: 10px;
-    margin-left: 10px;
-    width: 180px;
     height: 200px;
 
 }
@@ -338,6 +335,7 @@ li{
     position: absolute;
     top: 1550px;
     left: 250px;
+    bottom: 10px;
 }
 .last1{
     float: left;
@@ -353,9 +351,6 @@ li{
     top : 0px;
     width: 100%;
     z-index: 4;
-}
-.slide0{
-    display: none;
 }
 .boxmenu{
     position: absolute;
@@ -391,10 +386,54 @@ li{
 body{
     overflow-x: hidden;
 }
+.body{
+    overflow-x: hidden;
+}
+#ct{
+    overflow-x: hidden;
+}
+button{
+    cursor: pointer;
+}
 @media only screen and (max-width : 900px){
     .searchbtn{
         position: absolute;
-        right: 50px;
+        right: 44px;
         top : 10px;
+    }
+}
+@media only screen and (max-width : 500px) and (min-width: 400px){
+    .last{
+        width: 350px;
+        left: 20px;
+        margin-bottom: 10px;
+    }
+    .last1{
+        width: 50px;
+        margin-right: 15px;
+    }
+}
+@media only screen and (max-width : 400px) and (min-width: 300px){
+    .last{
+        width: 250px;
+        left: 20px;
+    }
+    .last1{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+}
+@media only screen and (max-width : 300px){
+    .last{
+        width: 180px;
+        left: 20px;
+        height: 30px;
+    }
+    .last1{
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        line-height: 20px;
     }
 }
