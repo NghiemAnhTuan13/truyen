@@ -188,14 +188,14 @@ li{
 }
 .btnleft{
     position: absolute;
-    top : 200px;
+    top : 220px;
     z-index: 1;
     height: 25px;
     width: 25px;
 }
 .btnright{
     position: absolute;
-    top : 200px;
+    top : 220px;
     right: 200px;
     z-index: 1;
     height: 25px;
@@ -330,12 +330,13 @@ li{
 
 }
 .last{
-    width: 500px;
+    width:auto;
     height: 50px;
     position: absolute;
     top: 1550px;
     left: 250px;
     bottom: 10px;
+    display: none;
 }
 .last1{
     float: left;
@@ -345,6 +346,11 @@ li{
     line-height: 50px;
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.time{
+    float: right;
+    margin-right: 3px;
+
 }
 .sticky{
     position: fixed;
@@ -390,10 +396,13 @@ body{
     overflow-x: hidden;
 }
 #ct{
-    overflow-x: hidden;
+    overflow: hidden;
 }
-button{
+button{ 
     cursor: pointer;
+}
+.last{
+    overflow: hidden;
 }
 @media only screen and (max-width : 900px){
     .searchbtn{
@@ -401,39 +410,24 @@ button{
         right: 44px;
         top : 10px;
     }
-}
-@media only screen and (max-width : 500px) and (min-width: 400px){
-    .last{
-        width: 350px;
-        left: 20px;
-        margin-bottom: 10px;
+    .btnleft{
+        top: 190px;
     }
-    .last1{
-        width: 50px;
-        margin-right: 15px;
+    .btnright{
+        top: 190px;
     }
 }
-@media only screen and (max-width : 400px) and (min-width: 300px){
-    .last{
-        width: 250px;
-        left: 20px;
+@media only screen and (max-width : 245px){
+    .btnleft{
+        left :10px;
+        top: 150px;
     }
-    .last1{
-        width: 40px;
-        height: 40px;
-        margin-right: 10px;
+    .btnright{
+        top:150px;
     }
-}
-@media only screen and (max-width : 300px){
-    .last{
-        width: 180px;
-        left: 20px;
-        height: 30px;
-    }
-    .last1{
-        width: 25px;
-        height: 25px;
-        margin-right: 10px;
-        line-height: 20px;
+    .body{
+        position: absolute;
+        left: -10px;
+        right: 0px;
     }
 }

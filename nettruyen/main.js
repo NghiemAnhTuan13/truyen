@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded',function(){
                 make_slide(4)
                 }
                 else{
-                    if(window.innerWidth>=500){
+                    if(window.innerWidth>500){
                         boxleft.style.display = `none`
                         boxright.style.display = `none`
                         bodymenu.style.display = 'none'
@@ -260,7 +260,6 @@ document.addEventListener('DOMContentLoaded',function(){
                             content[0].style.width =`${window.innerWidth-20}px`
                             content1.style.width =`${window.innerWidth-30}px`
                             last.style.top = '2100px'
-                            last.style.left = '30px'
 
                             heading.forEach((b)=>{
                                 b.style.display ='none'
@@ -283,22 +282,21 @@ document.addEventListener('DOMContentLoaded',function(){
                                 boxright.style.display = `none`
                                 bodymenu.style.display = 'none'
                                 reviewdiv.style.margin = `10px`
-                                content[1].style.margin = `0 0 0 15px `
+                                content[1].style.margin = `0 0 0 10px `
                                 content[0].style.margin = `0 0 0 20px ` 
                                 btnright.style.right = `10px`
-                                content[1].style.width =`${window.innerWidth-15}px`
+                                content[1].style.width =`${window.innerWidth-10}px`
                                 content[0].style.width =`${window.innerWidth-20}px`
                                 content1.style.width =`${window.innerWidth-30}px`
                                 last.style.top = `'2090px`
-                                last.style.left = '30px'
     
                                 heading.forEach((b)=>{
                                     b.style.display ='none'
                                 })
                                 bodymenu.style.display = 'none'
                                 element.forEach((a)=> {
-                                    a.style.width = `${content1.offsetWidth/1-40}px`
-                                    a.style.marginLeft ='10px'
+                                    a.style.width = `${content1.offsetWidth/1-10}px`
+                                    a.style.marginLeft ='20px'
                                 })
                                 for(var i=6;i<16;i++){
                                     element[i].style.display = 'none'
@@ -464,7 +462,6 @@ document.addEventListener('DOMContentLoaded',function(){
                         content[0].style.width =`${window.innerWidth-20}px`
                         content1.style.width =`${window.innerWidth-30}px`
                         last.style.top = '2100px'
-                        last.style.left = '30px'
                         heading.forEach((b)=>{
                             b.style.display ='none'
                         })
@@ -486,14 +483,13 @@ document.addEventListener('DOMContentLoaded',function(){
                             boxright.style.display = `none`
                             bodymenu.style.display = 'none'
                             reviewdiv.style.margin = `10px`
-                            content[1].style.margin = `0 0 0 15px `
+                            content[1].style.margin = `0 0 0 10px `
                             content[0].style.margin = `0 0 0 20px ` 
                             btnright.style.right = `10px`
-                            content[1].style.width =`${window.innerWidth-15}px`
+                            content[1].style.width =`${window.innerWidth-10}px`
                             content[0].style.width =`${window.innerWidth-20}px`
                             content1.style.width =`${window.innerWidth-30}px`
                             last.style.top = '2090px'
-                            last.style.left = '30px'
 
 
                             heading.forEach((b)=>{
@@ -501,8 +497,8 @@ document.addEventListener('DOMContentLoaded',function(){
                             })
                             bodymenu.style.display = 'none'
                             element.forEach((a)=> {
-                                a.style.width = `${content1.offsetWidth/1-40}px`
-                                a.style.marginLeft ='10px'
+                                a.style.width = `${content1.offsetWidth/1-10}px`
+                                a.style.marginLeft ='2px'
                             })
                             for(var i=6;i<16;i++){
                                 element[i].style.display = 'none'
